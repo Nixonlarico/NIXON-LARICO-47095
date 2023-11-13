@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <h1>Productos Disponibles</h1>
+    <ul>
+        <li data-producto="Producto 1" data-precio="10.00">Producto 1 - 10.00 PEN <button onclick="agregarAlCarrito('Producto 1', 10.00)">Agregar al carrito</button></li>
+        <li data-producto="Producto 2" data-precio="15.00">Producto 2 - 15.00 PEN <button onclick="agregarAlCarrito('Producto 2', 15.00)">Agregar al carrito</button></li>
+        <li data-producto="Producto 3" data-precio="20.00">Producto 3 - 20.00 PEN <button onclick="agregarAlCarrito('Producto 3', 20.00)">Agregar al carrito</button></li>
+        <li data-producto="Producto 4" data-precio="25.00">Producto 4 - 25.00 PEN <button onclick="agregarAlCarrito('Producto 4', 25.00)">Agregar al carrito</button></li>
+    </ul>
+
+    <h1>Carrito de Compras</h1>
+    <ul id="carrito">
+        <!-- Los productos seleccionados se mostrarán aquí -->
+    </ul>
+
+    <h2>Resumen de Compra</h2>
+    <div id="resumen">
+        <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+        <p><strong>Celular:</strong> <span id="celular"></span></p>
+        <p><strong>Dirección:</strong> <span id="direccion"></span></p>
+
+        <p>Total a Pagar: PEN <span id="total">0.00</span></p>
+        <button onclick="reiniciarProceso()">Reiniciar Proceso</button>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
